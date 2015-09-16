@@ -1,0 +1,284 @@
+@import "vendors/bootstrap/bootstrap.less";
+@import "vendors/font-awesome/font-awesome.less";
+
+@primary: #26a5d3;
+@dark: #333333;
+@light: #f4f4f4;
+
+html{
+	width:100%;
+	height:100%;
+}
+
+body{
+	width:100%;
+	height:100%;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:@dark;
+	background-color:@light;
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0 0 35px;
+	text-transform:uppercase;
+	font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+	letter-spacing:1px;
+}
+
+p{
+	margin: 0 0 25px;
+	font-size:18px;
+	line-height:1.6em;
+}
+
+a{
+	color:@primary;
+
+}
+
+a:hover{
+	text-decoration:none;
+	color: darken(@primary, 20%);
+}
+
+
+// Navigation
+
+@media(min-width:767px) {
+    .navbar.navbar-custom.navbar-fixed-top {
+        padding: 6px 0;
+        border-bottom: none;
+        letter-spacing: 1px;
+        background-color: #333333;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+}
+
+ .navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: @dark;
+}
+
+.navbar-brand:focus{
+	outline: none;
+} 
+
+.navbar-custom a{
+	color: @light;
+}
+
+.navbar-custom .nav li a{
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	-ms-transition: background 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover{
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-custom .nav li a:focus{
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggle{
+	padding: 4px 6px;
+	font-size: 16px;
+	color: green;
+}
+
+.navbar-custom .navbar-toggle .icon-bar{
+	background-color: @light;
+}
+
+.navbar-custom .navbar-toggle{
+	margin-top: 13px;
+}
+
+
+// Landing Page
+
+.intro{
+	display: table;
+	width: 100%;
+	height: auto;
+	padding:400px 0;
+	text-align:center;
+	background-image: url("../img/intro-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-color: @dark;
+}
+
+.intro-body{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.brand-heading{
+	font-size:40px;
+}
+
+.intro-text{
+	font-size:18px;
+}
+
+@media screen and (min-width:767px) {
+	.intro{
+		height:100%;
+		padding:0;
+	}
+
+	.brand-heading{
+		font-size:100px !important;
+	}
+
+	.intro-text{
+		font-size:25px;
+	}
+}
+
+.intro .col-md-8{
+	color: white;
+}
+
+
+
+@media screen and (min-width: 767px){
+	.navbar{
+		pading: 20px 0;
+		border-bottom: none;
+		background: transparent;
+	}
+}
+
+//why choose us
+
+#why{
+	padding: 70px 0px;
+}
+
+.block-icon-left{
+	overflow:auto;
+
+	h1, h2, h3, h4, h5, h6{
+		margin:0 0 10px 0;
+		padding:0;
+		font-size:20px;
+	}
+
+	.icon-content{
+		float:left;
+		width:70%;
+	}
+
+	.icon-content p{
+		font-size: 16px;
+	}
+
+	.icon{
+		float:left;
+		width: 30%;
+		margin-top:10px;
+	}
+}
+
+// Who are we
+
+#who{
+	display: table;
+	width: 100%;
+	height: 400px;
+	text-aligh: center;
+	background-image: url("../img/downloads-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+
+.who-section{
+	display: table-cell;
+	vertical-align: middle;
+	color: white;
+}
+
+@media(min-width:767px) {
+	.who-section{
+		padding: 100px 0;
+	}
+}
+
+//CLients
+
+#clients{
+	text-align: center;
+	padding: 100px 0 80px 0;
+}
+
+#clients img{
+	margin-left: 40px;
+}
+
+// Contact
+
+#contact{
+	background-color: @dark;
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+
+#contact .col-md-8{
+	padding: 70px 40px;
+}
+
+#contact .col-md-8 li a{
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.333;
+	border-radius: 5px;
+}
+
+//footer
+
+footer{
+	padding: 40px 0 5px 0;
+	text-align: center;
+}
+
+.page-scroll{
+	-webkit-tranisition-property: -webkit-transform;
+	-webkit-tranisition-duration: 1s;
+	-moz-tranisition-property: -moz-transform;
+	-moz-tranisition-duration: 1s;
+}
+
+@media screen and (min-width: 300px) and (max-width: 473px){
+	#contact .col-md-8 li{
+		padding: 0;
+	}
+
+	#contact .col-md-8 li a {
+	    padding: 8px 5px;
+	    font-size: 14px;
+	    line-height: 1.333;
+	    border-radius: 5px;
+    }
+
+    #clients img{
+    	max-width: 35%;
+    }
+
+    .icon-content p{
+    	font-size: 15px;
+    }	
+}
